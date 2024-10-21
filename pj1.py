@@ -1,7 +1,7 @@
 # Author: gx2g
 # Date: 10/19/2024
 # Purpose: Gain or lose points by guessing the sum of numbers game. 
-
+# adding a new line here to test github from ipad
 
 
 # Global Scope Variables
