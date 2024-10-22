@@ -32,6 +32,7 @@ for year in range(1, years + 1):
     interest = startBalance * rate
     endBalance = startBalance + interest
 
+    # string formating with left side padding creates table effect             
     print("%4d%18.2f%10.2f%16.2f" % (year, startBalance, interest, endBalance))
     startBalance = endBalance
     totalInterest += interest
@@ -39,14 +40,10 @@ for year in range(1, years + 1):
 print("Ending balance: $%0.2f" % endBalance)
 print("Total interest earned: $%0.2f" % totalInterest)
 
-
-
-
 print(n, "==========================="); n + 1;
 print("Thank you for using the Investment Report Tool by Robert Resendez!")
 print(n, "==========================="); n + 1;
 
 x = input("Press Ctrl+Alt+PrtScn to get a snapshot of this console, then Enter to exit: ")
-
 
 # End of MAIN PROGRAM
