@@ -24,7 +24,7 @@ rate = rate / 100
 totalInterest = 0.0
 
 # Display the header for the table
-print("%4s%18s%10s%16s" % ("Years", "Starting balance", "Interest", "Ending balance"))
+print("%20s%20s%20s%20s" % ("Years", "Starting balance", "Interest", "Ending balance"))
 
 # Compute and display the results for each year
 
@@ -33,7 +33,7 @@ for year in range(1, years + 1):
     endBalance = startBalance + interest
 
     # string formating with left side padding creates table effect             
-    print("%4d%18.2f%10.2f%16.2f" % (year, startBalance, interest, endBalance))
+    print("%20d%20.2f%20.2f%20.2f" % (year, startBalance, interest, endBalance))
     startBalance = endBalance
     totalInterest += interest
 
