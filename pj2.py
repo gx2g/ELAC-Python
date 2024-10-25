@@ -29,11 +29,16 @@ print("%20s%20s%20s%20s" % ("Years", "Starting balance", "Interest", "Ending bal
 # Compute and display the results for each year
 
 for year in range(1, years + 1):
+    # interest is startBalance times rate f rom user input
     interest = startBalance * rate
+
+    # endBalance is startBalance after rate times then we add interest to it. 
     endBalance = startBalance + interest
 
-    # string formating with left side padding creates table effect             
+    # string formating with left side padding creates table effect with variables after calculation            
     print("%20d%20.2f%20.2f%20.2f" % (year, startBalance, interest, endBalance))
+    
+    #
     startBalance = endBalance
     totalInterest += interest
 
