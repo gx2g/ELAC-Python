@@ -1,6 +1,6 @@
 # Author: Robert Resendez
 # Date: 10/21/2024
-# Purpose: 
+# Purpose: Calculate investment interest over years 
 
 # MAIN PROGRAM
 
@@ -15,7 +15,7 @@ print(n, "==========================="); n + 1;
 # Accept the inputs
 startBalance = float(input("Enter the investment ammount: "))
 years = int(input("Enter the number of years: "))
-rate = int(input("Enter the rate as a %: "))
+rate = float(input("Enter the rate as a %: "))
 
 # Convert the rate to a decimal number
 rate = rate / 100
@@ -38,8 +38,10 @@ for year in range(1, years + 1):
     # string formating with left side padding creates table effect with variables after calculation            
     print("%20d%20.2f%20.2f%20.2f" % (year, startBalance, interest, endBalance))
     
-    #
+    # after calculations start balance equals end balance
     startBalance = endBalance
+
+    # total interest increments 
     totalInterest += interest
 
 print("Ending balance: $%0.2f" % endBalance)
