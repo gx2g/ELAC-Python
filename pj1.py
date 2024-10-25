@@ -1,4 +1,4 @@
-# Author: gx2g
+# Author: Robert Resendez
 # Date: 10/19/2024
 # Purpose: Gain or lose points by guessing the sum of numbers game. 
 # adding a new line here to test github from ipad
@@ -53,7 +53,7 @@ while True :
 # print ending messages after break
 print(n, "================================================="); n+=1;
 print("Finally, you have " + str(npts[0]) + " points in your account!")
-print("Thank you for playing this wonderful game designed by gx2g")
+print("Thank you for playing this wonderful game designed by Robert Resendez")
 
 print(n, "================================================="); n+=1;
 x = input("Press Ctrl+Alt+PrtScn to get a snapshot of this console, then ENTER to exit")
