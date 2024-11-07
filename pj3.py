@@ -16,16 +16,18 @@ print(" ---------------" + " " + chr(0x2680) + " " + chr(0x2681) + " " + chr(0x2
 
 print("Welcome to the Rolling 2 Dice Game by Robert Resendez" + chr(0x2757))
 print("================================================")
+
+ # get bet from user
+bet = int(input("Enter your bet to roll 2 dice for this complete game (enter 0 to quit):"))
+if bet == 0:
+    exit()
+
 print("Bank: You have $" + str(yourMoney) + " to play th game, Dealer also has " + str(dealerMoney) + " dollars to play with.")
 
 # start of game
 while True: 
     print(n, "------------------------------------------"); n+=1;
-    # get bet from user
-    bet = int(input("Enter your bet to roll 2 dice for this complete game (enter 0 to quit):"))
-    if bet == 0:
-        break
-
+   
     # dealer rolls dice
     dealer = random.randint(1, 6) + random.randint(1, 6)
     # you roll dice
