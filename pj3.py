@@ -27,12 +27,12 @@ while True:
         break
 
     # dealer rolls dice
-    dealer = random.randint(1, 6)
+    dealer = random.randint(1, 6) + random.randint(1, 6)
     # you roll dice
-    you = random.randint(1, 6)
+    you = random.randint(1, 6) + random.randint(1, 6)
 
     # print results of bet
-    print("Dealer got " + str(dealer) + " and you got " + str(you) + ".")
+    print("Roll 2 Dice twice, Dealer got " + str(dealer) + " and you got " + str(you) + ".")
 
     # dealer greater then you, you lost
     if dealer > you:
