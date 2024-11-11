@@ -8,21 +8,16 @@ print("Welcome to the PASSWORD game of \"Robert Resendez\"!")
 print(n, "===================================================="); n += 1;
 pw = input("Please enter a password (Enter q to quit): ")
 
+# while loop, keep going until q is specified. 
 while (pw != "q"):
     print("The password you just entered is " + pw)
-    # set all counts to zero
     
-    # variable for how many valiolations
+    # set all counts to zero, variables for violations
     badcount = 0 
-    # variable for numbers
     countdigits = 0
-    # variable for special characters
-    countsymbols = 0
-    # variable to check lower case 
+    countsymbols = 0 
     countlower = 0
-    # variable to check upper case
     countupper = 0
-    # variable to count years
     countyears = 0
 
 
@@ -39,17 +34,51 @@ while (pw != "q"):
     countlower += pw.count('n') + pw.count('o') + pw.count('p') + pw.count('q') + pw.count('r') + pw.count('s')
     countlower += pw.count('t') + pw.count('u') + pw.count('v') + pw.count('w') + pw.count('x') + pw.count('y') + pw.count('z')
 
+    countdigits += pw.count('0') + pw.count('1') + pw.count('2') + pw.count('3') + pw.count('4') 
+    countdigits += pw.count('5') + pw.count('6') + pw.count('7')
+    
+    countsymbols += pw.count('$') + pw.count('%') + pw.count('@') + pw.count('!') + pw.count('?') + pw.count('*')
+
+    countyears += pw.count('2021') + pw.count('2022') + pw.count('2023') + pw.count('2024')
     
     if(countupper <= 1):
-        print("Reason: Less than 2 upper-case letters")
+        print("Reason 1: Less than 2 upper-case letters")
         badcount += 1
     
     if(countlower <= 1):
-        print("Reason: Less than 2 lower-case letters")
+        print("Reason 2: Less than 2 lower-case letters")
         badcount += 1
     
+    if(len(pw) <= 6):
+        print("Reason 3: Less then 7 characters long")
+        badcount += 1
+    
+    if countdigits <= 1:
+        print("Reason 4:less then 2 digits (numbers)")
+        badcount += 1
 
+    if (len(pw) >= 11):
+        print("Reason 5: more then 12 characters long")
+        badcount += 1
+    
+    if pw.count('') > 0:
+        print("Reason 6: Not Secure, contains spaces")
+        badcount += 1
 
+    if pw.isdigit(): 
+        print("Reason 7: not secure it contains only 1 digit")
+        badcount += 1
+
+    if pw.isalpha():
+        print("Reason 8: not secure it contains only alphabets")
+        badcount += 1
+
+    if countsymbols <= 0:
+        print("Reason 9: not secure contains none of these ($, %, @, !, ?, *)")
+        badcount += 1
+
+    if (countyears <= 1):
+        print("Reason 10: not secure cointains 2024, 2023, 2022, or 2021")
 
     if badcount == 0:
         print("Congratulations! Your password is very secure!")
