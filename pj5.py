@@ -41,11 +41,11 @@ while (pw != "q"):
 
     
     if(countupper <= 1):
-        print("Reason: Your password is not secure since it has less than 2 upper-case letters")
+        print("Reason: Less than 2 upper-case letters")
         badcount += 1
     
     if(countlower <= 1):
-        print("Reason: Your password is not secure since it has less than 2 lower-case letters")
+        print("Reason: Less than 2 lower-case letters")
         badcount += 1
     
 
@@ -54,7 +54,7 @@ while (pw != "q"):
     if badcount == 0:
         print("Congratulations! Your password is very secure!")
     else: 
-        print("Your password has the avoe, ", badcount, "problems to be fixed")
+        print("Your password has the above,", badcount,"problems to be fixed")
     
     print(n, "----------------------------------------------------"); n += 1;    
     pw = input("Please enter a password (Enter q to quit): ")
