@@ -34,13 +34,17 @@ while (pw != "q"):
     countlower += pw.count('n') + pw.count('o') + pw.count('p') + pw.count('q') + pw.count('r') + pw.count('s')
     countlower += pw.count('t') + pw.count('u') + pw.count('v') + pw.count('w') + pw.count('x') + pw.count('y') + pw.count('z')
 
+    # Counting if password is 7 characters long
     countdigits += pw.count('0') + pw.count('1') + pw.count('2') + pw.count('3') + pw.count('4') 
     countdigits += pw.count('5') + pw.count('6') + pw.count('7')
     
+    # Counting for special characters
     countsymbols += pw.count('$') + pw.count('%') + pw.count('@') + pw.count('!') + pw.count('?') + pw.count('*')
 
+    # Counting for recent years
     countyears += pw.count('2021') + pw.count('2022') + pw.count('2023') + pw.count('2024')
     
+    # preforming checks with expressions
     if(countupper <= 1):
         print("Reason 1: Less than 2 upper-case letters")
         badcount += 1
