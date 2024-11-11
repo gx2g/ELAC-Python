@@ -1,8 +1,6 @@
 # Author: Robert Resendez
 # Date: 11-08-2024
-# Purpose: Password Game – to check whether a password is very secure
-
-
+# Purpose: Password Game – check password security
 
 n = 1
 
@@ -14,11 +12,17 @@ while (pw != "q"):
     print("The password you just entered is " + pw)
     # set all counts to zero
     
+    # variable for how many valiolations
     badcount = 0 
+    # variable for numbers
     countdigits = 0
+    # variable for special characters
     countsymbols = 0
+    # variable to check lower case 
     countlower = 0
+    # variable to check upper case
     countupper = 0
+    # variable to count years
     countyears = 0
 
 
@@ -37,11 +41,11 @@ while (pw != "q"):
 
     
     if(countupper <= 1):
-        print("R1: Your password is not secure since it has less than 2 upper-case letters")
+        print("Reason: Your password is not secure since it has less than 2 upper-case letters")
         badcount += 1
     
     if(countlower <= 1):
-        print("R2: Your password is not secure since it has less than 2 lower-case letters")
+        print("Reason: Your password is not secure since it has less than 2 lower-case letters")
         badcount += 1
     
 
@@ -52,15 +56,14 @@ while (pw != "q"):
     else: 
         print("Your password has the avoe, ", badcount, "problems to be fixed")
     
+    print(n, "----------------------------------------------------"); n += 1;    
     pw = input("Please enter a password (Enter q to quit): ")
+    print("-------------------------------------------------------")
 
 
-
-
-
-print(n, "===================================================="); n += 1;
+print("====================================================")
 print("Thank you for playing this PASSWORD game by Robert Resendez")
-print(n, "================== END of GAME ====================="); n += 1;
+print("================== END of GAME =====================")
 
 
 
